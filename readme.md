@@ -206,8 +206,7 @@ Nullsetzen und umformen liefert dann
 $$
 \begin{equation}
   \exp(-\alpha_m)
-    \sum_{y_i=\kappa_m(x_i)} \omega_i^{(m)} 
-  =
+    \sum_{y_i=\kappa_m(x_i)} \omega_i^{(m)} =
   \exp(\alpha_m)
     \sum_{y_i\neq\kappa_m(x_i)} \omega_i^{(m)} 
 \end{equation}
@@ -219,8 +218,7 @@ $$
 \begin{equation}
   -\alpha_m
   +
-  \ln\left(\sum_{y_i=\kappa_m(x_i)} \omega_i^{(m)}\right)
-  =
+  \ln\left(\sum_{y_i=\kappa_m(x_i)} \omega_i^{(m)}\right) =
   \alpha_m
   +
   \ln\left(\sum_{y_i\neq\kappa_m(x_i)} \omega_i^{(m)}\right)
@@ -228,8 +226,7 @@ $$
 $$
 und schließlich auch
 $$\begin{equation}
-  \alpha_m
-  =
+  \alpha_m =
   \frac{1}{2}
   \ln\left(
      \frac{
