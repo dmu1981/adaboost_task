@@ -255,7 +255,42 @@ $$
   \alpha_m = \frac12\ln\left(\frac{1-\epsilon_m}{\epsilon_m}\right)
 \end{equation}  
 $$
+
+# Ein Überblick über den Code
+In diesem Repository finden Sie die Datei
+
+    adaboost_task.py
+
+Diese enthält viel Rahmenwerk welches nötig ist um die AdaBoost Cascade auf dem Digits-Datensatz von SciKit-Learn zu trainieren und auszuwerten. Die Kern-Methoden sind jedoch nicht implementiert und müssen von Ihnen befüllt werden. 
+
+Am unteren Ende der Datei finden Sie den eigentlichen Loop, mit welchem die Kaskade konkret aufgebaut wird
+
+    # Start with an empty cascade
+    cascade = []
+
+    # Add 50 weak classifiers 
+    for i in range(50):
+      # Generate a new set of weak classifier
+      classifiers = generate_weak_classifiers()  
+
+      # Pick one and re-evaluate the weights for each samples
+      weights, cascade = build_one_stage(data, labels, weights, classifiers, cascade)
+      
+      # Calculate predictions for the whole cascade
+      predictions = predict_cascade(data, cascade)
+
+      # Count wrong samples
+      wrong = predictions != labels
+      total_wrong = wrong.sum()
+
+      # Also calculate total error value
+      E = np.sum(np.exp(-predictions * labels))
+
+      # Output
+      print(f"Stage {i}, E={E:.5f}, total wrong = {total_wrong}")
  
+Der Code wird erst dann korrekt funktionieren nachdem alle vier Aufgaben korrekt abgeschlossen sind. 
+
 # Erste Aufgabe: Der schwache Klassifikator
 **In dieser Aufgabe müssen sie die Klasse "WeakClassifier" sinnvoll implementieren**. 
 
