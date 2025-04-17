@@ -193,13 +193,16 @@ minimal wird. Das bedeutet wir müssen aus allen möglichen Klassifikatoren $\ka
 
 ### Der Alpha-Wert
 Nachdem der geeignete Klassifikator $\kappa_m$ bestimmt wurde bleibt noch der diesem Klassifikator zugeordnete Alpha-Wert zu bestimmen. Dazu leiten wird Gleichung (5) nach $\alpha_m$ ab und finden zunächst
+
 $$
 \begin{equation}
   \frac{\partial E}{\partial \alpha_m} = -\sum_{y_i=\kappa_m(x_i)} \omega_i^{(m)} \exp(-\alpha_m)
     + \sum_{y_i\neq\kappa_m(x_i)} \omega_i^{(m)} \exp(\alpha_m)
 \end{equation}              
 $$
+
 Nullsetzen und umformen liefert dann 
+
 $$
 \begin{equation}
   \exp(-\alpha_m)
@@ -209,7 +212,9 @@ $$
     \sum_{y_i\neq\kappa_m(x_i)} \omega_i^{(m)} 
 \end{equation}
 $$
+
 Logarithmieren liefert dann
+
 $$
 \begin{equation}
   -\alpha_m
@@ -234,7 +239,9 @@ $$\begin{equation}
      }
     \right)
 \end{equation}$$
+
 Mit der gewichteten Fehlerrate 
+
 $$
 \epsilon_m = 
 \frac{
