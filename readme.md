@@ -267,7 +267,7 @@ Hinweis: Die gewählten Dimensionen müssen für jeden Klassifikator fixiert wer
 
 Hinweis 2: In den meisten Kombinationen von zwei Feature-Dimensionen entsteht so kein sinnvoller Klassifikator. Das ist aber auch nicht wichtig solange nur die Chance besteht das mit etwas Glück auch ein sinnvoller Klassifikator dabei ist. Der AdaBoost Algorithmus wird diesen dann später finden und auswählen.
 
-![image](weakclassifier.png)
+![image](weakclassifier.PNG)
 
     class WeakClassifier:
       def __init__(self, nFeatures):
